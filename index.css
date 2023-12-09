@@ -1,0 +1,137 @@
+.bg-red{
+    background: red;
+}
+.bg-green{
+    background: green;
+}
+.bg-blue{
+    background: blue;
+}
+.bg-orange{
+    background: orange;
+}
+.bg-dark{
+    background: rgb(42, 42, 42);
+}
+.bg-white{
+    background: white;
+}
+.text-white{
+    color: rgb(248, 248, 248);
+}
+.text-dark{
+    color: rgb(23, 23, 23);
+}
+.not-link{
+    text-decoration: none;
+}
+
+/* FLEX POSITION */
+.flex {
+	display: flex;
+}
+.j-content-center {
+	justify-content: center;
+}
+.j-content-space-betwen {
+	justify-content: space-between;
+}
+.j-content-space-around {
+	justify-content: space-around;
+}
+.j-content-betwen {
+	justify-content: space-between;
+}
+.j-content-around {
+	justify-content: space-around;
+}
+.j-content-evenly {
+	justify-content: space-evenly;
+}
+.f-direction-column {
+	flex-direction: column;
+}
+.align-center {
+	align-items: center;
+}
+.wrap {
+	flex-wrap: wrap;
+}
+
+/* ALTURAS Y ANCHOS */
+.h-100{
+    height: 100vh;
+}
+.w-100{
+    width: 100%;
+}
+
+/* ESTILOS GRAL */
+
+.header{
+    height: 9vh;
+    position: fixed;
+    z-index: 100;
+}
+
+.elem-navbar{
+    font-size: 1.5rem;
+}
+.elem-navbar a{
+    text-decoration: none;
+    color: azure;
+}
+.content-cards{
+    width: 70%;
+    height: 80vh;
+    border-radius: 10px;
+    margin-top: 9vh;
+}
+.common_card{
+    border-radius: 10px;
+    transition: width 0.3s, height 0.3s;
+    background-position: center;
+    background-size: contain;
+}
+.card{
+    width: 15rem;
+    height: 22rem;
+}
+.index-card{
+    z-index: 5;
+}
+.normal-size{
+    width: 10rem;
+    height: 22rem;
+}
+.medium{
+    width: 17rem;
+    height: 24rem;
+}
+#left{
+    background: url('./src/public/img/potada01.webp') no-repeat;
+}
+#medium{
+    position: absolute;
+    background: url('./src/public/img/potada02.jpg') no-repeat;
+}
+#rigth{
+    background: url('./src/public/img/potada03.png') no-repeat;
+}
+.card:hover{
+    animation-name: agrandarCard;
+	animation-duration: 0.3s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-in-out;
+}
+
+@keyframes agrandarCard {
+	0% {
+		width: 15rem;
+        height: 22rem;
+	}
+	100% {
+		width: 17rem;
+        height: 24rem;
+	}
+}

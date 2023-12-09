@@ -39,11 +39,11 @@
 .j-content-space-around {
 	justify-content: space-around;
 }
-.j-content-betwen {
-	justify-content: space-between;
-}
 .j-content-around {
 	justify-content: space-around;
+}
+.j-content-end{
+    justify-content: end;
 }
 .j-content-evenly {
 	justify-content: space-evenly;
@@ -86,23 +86,27 @@
     height: 80vh;
     border-radius: 10px;
     margin-top: 9vh;
+    position: relative;
 }
 .common_card{
     border-radius: 10px;
     transition: width 0.3s, height 0.3s;
     background-position: center;
-    background-size: contain;
+    background-size: cover;
 }
 .card{
     width: 15rem;
-    height: 22rem;
+    height: 19rem;
 }
 .index-card{
     z-index: 5;
 }
+.index-two{
+    z-index: 4;
+}
 .normal-size{
     width: 10rem;
-    height: 22rem;
+    height: 19rem;
 }
 .medium{
     width: 17rem;
@@ -110,13 +114,19 @@
 }
 #left{
     background: url('./src/public/img/potada01.webp') no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 #medium{
     position: absolute;
     background: url('./src/public/img/potada02.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 #rigth{
     background: url('./src/public/img/potada03.png') no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 .card:hover{
     animation-name: agrandarCard;
@@ -125,10 +135,49 @@
 	animation-timing-function: ease-in-out;
 }
 
+/* CONTENIDO DENTRO DE LAS CARDS */
+.contenido{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(36,0,98,1) 0%, rgba(114,35,169,1) 20%, rgba(0,212,255,0) 60%);
+    border-radius: 10px;
+    gap: 1vh;
+    position: relative;
+}
+.desc-cartel{
+    clip-path: polygon(5% 0, 100% 0, 100% 100%, 0% 100%);
+    background: black;
+    border: 1px solid yellow;
+    width: 60%;
+    text-align: right;
+    padding:1vh 1vw 1vh 0;
+}
+.btn-generic{
+    padding: 2vh;
+    clip-path: polygon(5% 0, 100% 0, 95% 100%, 0% 100%);
+    background: black;
+    margin-bottom: 4vh;
+}
+.title-card-game{
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+.desc-cartel{
+    position: absolute;
+    right: 0;
+    top: 8vh;
+}
+.card_not{
+    opacity: .7;
+}
+.oculto{
+    visibility: hidden;
+}
+
 @keyframes agrandarCard {
 	0% {
 		width: 15rem;
-        height: 22rem;
+        height: 19rem;
 	}
 	100% {
 		width: 17rem;
